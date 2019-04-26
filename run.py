@@ -55,14 +55,23 @@ def cross_in_tray(X, Y):
     A = np.absolute(np.sin(X)*np.sin(Y)*B)+1
     return -0.0001*(A**0.1)
 
+def levi(X, Y):
+    """constraints=10,
+    minimum f(1,1)=0.0
+    """
+    A = np.sin(3.0*np.pi*X)**2
+    B = ((X-1)**2)*(1+np.sin(3.0*np.pi*Y)**2)
+    C = ((Y-1)**2)*(1+np.sin(2.0*np.pi*Y)**2)
+    return A + B + C
+
 def main():
     args = parse_cl_args()
 
     nsols = args.nsols
     ngens = args.ngens
 
-    funcs = {'schaffer':schaffer, 'eggholder':eggholder, 'booth':booth, 'matyas':matyas, 'cross':cross_in_tray}
-    func_constraints = {'schaffer':100.0, 'eggholder':512.0, 'booth':10.0, 'matyas':10.0, 'cross':10.0}
+    funcs = {'schaffer':schaffer, 'eggholder':eggholder, 'booth':booth, 'matyas':matyas, 'cross':cross_in_tray, 'levi':levi}
+    func_constraints = {'schaffer':100.0, 'eggholder':512.0, 'booth':10.0, 'matyas':10.0, 'cross':10.0, 'levi':10.0}
 
     if args.func in funcs:
         func = funcs[args.func]

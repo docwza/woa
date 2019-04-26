@@ -111,5 +111,5 @@ class WhaleOptimization():
 
     def _attack(self, sol, best_sol):
         D = np.linalg.norm(best_sol - sol)
-        L = np.random.uniform(-1.0, 1.0)
-        return (D*np.exp([self._b*L])*np.cos(2.0*np.pi*L)) + best_sol 
+        L = np.random.uniform(-1.0, 1.0, size=2)
+        return np.multiply(np.multiply(D,np.exp(self._b*L)), np.cos(2.0*np.pi*L))+best_sol
