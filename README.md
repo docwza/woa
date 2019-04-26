@@ -3,6 +3,7 @@ Python implementation of the Whale Optimization Algorithm
 
 ![](gifs/schaffer.gif)
 ![](gifs/cross.gif)
+![](gifs/levi.gif)
 
 ### Description
 Python implementation of the [Whale Optimization Algorithm](https://www.sciencedirect.com/science/article/pii/S0965997816300163). Additional information can be found at the [algorithm's webpage](http://www.alimirjalili.com/WOA.html).
