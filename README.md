@@ -14,6 +14,6 @@ Python implementation of the [Whale Optimization Algorithm](https://www.scienced
 - [Python](https://www.python.org/) 3.6
 - [SciPy](https://keras.io/) 2.2.4
 
-##Running the code
+## Running the code
 
 `python run.py` will run the WOA with default arguments. Run `python run.py --help` to learn more about command line arguments. A few test optimization functions have been included for demonstration purposes. 
