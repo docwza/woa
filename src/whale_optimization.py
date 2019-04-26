@@ -106,7 +106,7 @@ class WhaleOptimization():
         return rand_sol - np.multiply(A, D)
 
     def _search_D(self, sol, rand_sol):
-        C = self._compute_C()                                                                                                                         
+        C = self._compute_C()
         return np.linalg.norm(np.multiply(C, rand_sol) - sol)    
 
     def _attack(self, sol, best_sol):
